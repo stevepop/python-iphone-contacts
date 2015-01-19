@@ -65,7 +65,7 @@ def contacts_write(contacts_data):
 
 
 def index():
-	es = elasticsearch.Elasticsearch()
+	es = elasticsearch.Elasticsearch("es.stevepop.dev:9500")
 	with open(cfile,"rU") as f_contacts:
 		contacts = contacts_reader(f_contacts)
 		contacts_write(contacts)
